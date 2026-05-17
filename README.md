@@ -39,6 +39,11 @@ It focuses on page structure, navigation, styling, images, forms, tables, and re
 - HTML5
 - CSS3
 
+## Live Website
+
+View the live website here:  
+https://beautybarua.github.io/baruas-sandwich-corner/
+
 ## Folder Structure
 
 ```text
