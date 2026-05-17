@@ -10,6 +10,12 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ---------- Hero Section ---------- */
+
 .top {
   min-height: 100vh;
   width: 100%;
@@ -18,6 +24,10 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
+}
+
+.page-hero {
+  min-height: 60vh;
 }
 
 nav {
@@ -39,7 +49,7 @@ nav img {
 .nav-links ul li {
   list-style: none;
   display: inline-block;
-  padding: 8px 12px;
+  padding: 8px 9px;
   position: relative;
 }
 
@@ -121,8 +131,6 @@ article {
 article img {
   width: 40%;
   float: right;
-  right: 0px;
-  top: -25px;
 }
 
 article table {
@@ -146,6 +154,10 @@ article h2 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+}
+
 /* ---------- Home Page Info Section ---------- */
 
 .home-info {
@@ -155,6 +167,7 @@ article h2 {
   padding: 40px;
   border: none;
   background-color: #f4f4f4;
+  border-radius: 8px;
 }
 
 .home-info-content {
@@ -254,8 +267,28 @@ aside ul {
   font-size: 17px;
 }
 
-h2 {
+/* ---------- Menu Intro Section ---------- */
+
+.menu-intro {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 35px;
+  border: none;
+  background-color: #f4f4f4;
   text-align: center;
+  border-radius: 8px;
+}
+
+.menu-intro h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.menu-intro p {
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 /* ---------- Form Styling ---------- */
@@ -302,107 +335,6 @@ main {
 
 .checked {
   color: orange;
-}
-
-/* ---------- Mobile Design ---------- */
-
-@media (max-width: 700px) {
-  nav {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  nav img {
-    width: 120px;
-  }
-
-  .nav-links {
-    text-align: center;
-  }
-
-  .nav-links ul li {
-    display: block;
-    padding: 8px 0;
-  }
-
-  .text-box h1 {
-    font-size: 32px;
-  }
-
-  .text-box p {
-    font-size: 16px;
-  }
-
-  .home-info {
-    width: 95%;
-    padding: 25px;
-  }
-
-  .home-info-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .home-info-content img {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  @media (max-width: 700px) {
-  aside {
-    flex-direction: column;
-    width: 95%;
-    text-align: center;
-  }
-
-  aside img {
-    width: 100%;
-    height: auto;
-  }
-
-  aside ul {
-    text-align: left;
-    display: inline-block;
-  }
-}
-
-  aside div {
-    width: 100%;
-    padding: 20px;
-    margin: 0;
-    font-size: larger;
-    text-align: left;
-  }
-}
-
-/* ---------- Menu Intro Section ---------- */
-
-.menu-intro {
-  width: 90%;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 35px;
-  border: none;
-  background-color: #f4f4f4;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.menu-intro h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.menu-intro p {
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-/* ---------- Smaller Hero for Inner Pages ---------- */
-
-.page-hero {
-  min-height: 60vh;
 }
 
 /* ---------- Contact Page ---------- */
@@ -500,12 +432,6 @@ fieldset legend {
   background-color: #f44336;
 }
 
-@media (max-width: 700px) {
-  .contact-form {
-    padding: 25px;
-  }
-}
-
 /* ---------- About Page ---------- */
 
 .about-section {
@@ -531,6 +457,7 @@ fieldset legend {
   line-height: 1.7;
   margin-bottom: 18px;
 }
+
 /* ---------- Services Page ---------- */
 
 .services-section {
@@ -591,22 +518,6 @@ fieldset legend {
   color: white;
 }
 
-@media (max-width: 700px) {
-  .services-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .services-content img {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .hours-table th,
-  .hours-table td {
-    text-align: center;
-  }
-}
 /* ---------- Staff Page ---------- */
 
 .staff-intro {
@@ -652,6 +563,7 @@ fieldset legend {
   width: 230px;
   height: 230px;
   object-fit: cover;
+  object-position: top center;
   border-radius: 8px;
 }
 
@@ -672,18 +584,6 @@ fieldset legend {
   line-height: 1.6;
 }
 
-@media (max-width: 700px) {
-  .staff-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .staff-card img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-}
 /* ---------- Testimonial Page ---------- */
 
 .testimonial-intro {
@@ -773,19 +673,6 @@ fieldset legend {
   border-radius: 8px;
 }
 
-@media (max-width: 700px) {
-  .testimonial-card {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .testimonial-card img {
-    width: 150px;
-    height: 150px;
-  }
-}
-
 /* ---------- Direction Page ---------- */
 
 .direction-section {
@@ -831,6 +718,7 @@ fieldset legend {
 .map-button:hover {
   background-color: #f44336;
 }
+
 /* ---------- Link Page ---------- */
 
 .link-section {
@@ -878,6 +766,7 @@ fieldset legend {
   background-color: rgb(34, 91, 114);
   color: white;
 }
+
 /* ---------- Template Page ---------- */
 
 .template-section {
@@ -900,4 +789,146 @@ fieldset legend {
 .template-section p {
   font-size: 18px;
   line-height: 1.6;
+}
+
+/* ---------- Mobile Design ---------- */
+
+@media (max-width: 700px) {
+  .top {
+    min-height: 100vh;
+  }
+
+  .page-hero {
+    min-height: 70vh;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 20px 12px;
+    gap: 12px;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+
+  nav img {
+    width: 85px;
+  }
+
+  .nav-links {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links ul {
+    padding: 0;
+  }
+
+  .nav-links ul li {
+    display: inline-block;
+    padding: 5px 6px;
+  }
+
+  .nav-links ul li a {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .text-box {
+    top: 64%;
+    width: 92%;
+  }
+
+  .text-box h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .text-box p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+
+  .hero-btn {
+    padding: 10px 22px;
+    font-size: 12px;
+  }
+
+  .home-info,
+  .menu-intro,
+  .contact-intro,
+  .about-section,
+  .services-section,
+  .staff-intro,
+  .testimonial-intro,
+  .video-section,
+  .direction-section,
+  .link-section,
+  .template-section {
+    width: 92%;
+    padding: 25px;
+    margin: 30px auto;
+  }
+
+  .home-info-content,
+  .services-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-info-content img,
+  .services-content img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  aside {
+    flex-direction: column;
+    width: 92%;
+    text-align: center;
+    gap: 15px;
+  }
+
+  aside img {
+    width: 100%;
+    height: auto;
+  }
+
+  aside div {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  aside ul {
+    text-align: left;
+    display: inline-block;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .hours-table th,
+  .hours-table td {
+    text-align: center;
+  }
+
+  .staff-card,
+  .testimonial-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .staff-card img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+  }
+
+  .testimonial-card img {
+    width: 150px;
+    height: 150px;
+  }
 }
